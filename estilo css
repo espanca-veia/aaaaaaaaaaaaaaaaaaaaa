@@ -1,27 +1,119 @@
-/* Raleway via Google Fonts - Importação Completa */
-
-/* Estilo Itálico (Pesos 100-900) */
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(https://gstatic.com) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+:root {
+   --cor-de-fundo: #091413;
+   --cor-de-texto-principal: #B0E4CC;
+   --cor-de-texto-secundário: #1db66e;
+   --botão-ativo: #7FB77E;
+   --botao-inativo: #225721;
 }
 
-/* Estilo Normal (Pesos 100-900) */
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(https://gstatic.com) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* Como aplicar no seu código: */
 body {
-  font-family: 'Raleway', sans-serif;
+   font-family: "Raleway", sans-serif;
+   background: var(--cor-de-fundo);
+   color: var(--cor-de-texto-principal);
 }
 
+.conteudo-principal {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
+
+}
+
+.titulo-principal {
+
+   text-align: left;
+   width: 100%;
+   font-size: 32px;
+}
+
+
+.botao {
+   background-color: var(--botão-ativo);
+    display: flex;
+   justify-content: center;
+   padding: lem;
+   font-size: 18px;
+   align-items: center;
+   width: 100%;
+   border-bottom: 4px solid var(--botão-ativo);
+   border-left: 4px solid var(--botão-ativo);
+   border-right: 2px solid var(var(--botão-ativo));
+   border-top: none;
+}
+
+.botao:first-child{
+      border-radius: 40px 40px 0 0;
+}
+
+.botao.ativo{
+   background-color: var(--botão-ativo);
+   border-bottom: 4px solid grey;
+
+}
+.aba-conteudo.ativo{
+       display:block
+}
+.aba--conteudo{
+   display: none;
+
+}
+.abas-texto{
+    background-color:var(--botao-inativo);
+    padding:  40px;
+    border-radius: 0 0 40px 40px;
+
+}
+
+.conteudo-titulo-principal{
+   font-size: 28;
+   text-align: center;
+}
+.conteudo-titulo-secundario{
+   text-align: center;
+   color: #b0e4cc var(--cor-texto-secundaria);
+   text-transform: uppercase;
+}
+.contador{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.contador-digito{
+   padding: 0 16px;
+   text-align: center;
+   min-height: 100px;
+
+}
+.contador-digito-numerico{
+   font-size: 80px;
+   margin: 0;
+   
+}
+.contador-digito-texto{
+   color: aliceblue var(--cor-de-texto-secundário);
+   font-size: 20px;
+   margin: 0;
+}
+
+
+
+@media screen and (min-width: 768px){
+
+        .botoes{
+             display: flex;
+        }
+.botao:first-child{
+border-radius: 40px 0 0 0;
+}
+   .botao:last-child{
+border-radius: 0 40px 0 0;
+}
+}
+.conteudo-principal{
+      font-size: 28px;
+      text-align: center;
+}
